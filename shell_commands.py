@@ -1,0 +1,20 @@
+from employee.models import*
+vasya = Employee(name = "Vasya", position = "software engeneer", salary = 5000 )
+vasya.save()
+vitya = Employee(name = "Vitya", position = "developer", salary = 3000)
+vitya.save()
+viktor = Employee(name = "Viktor", position = "data analyst", salary = 4000)
+viktor.save()
+gena = Employee(name = "Genna",  position = "fullstack developer/data scientist", salary = 9000)
+gena.save()
+
+m = Membership("123456789024681","0000001", employee = vasya)
+m.save()
+m1 = Membership("098765432012347","0000010", employee = vitya)
+m1.save()
+m2 = Membership("331341651171700","0000100", employee = viktor)
+m2.save()
+m3 = Membership("102030405598679","0001000", employee = gena)
+m3.save()
+
+m3.delete()
